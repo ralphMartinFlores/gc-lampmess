@@ -1,0 +1,37 @@
+mat-drawer-container {
+    height: 100%;
+}
+mat-drawer {
+    width: 200px;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-400);
+}
+.example-spacer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+}
+mat-toolbar {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: var(--clr-neutral-400);;
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+.profile-btn:hover {
+    background-color: var(--clr-secondary-400);
+}
+.main__container {
+    border: 2px solid red;
+}
+mat-form-field {
+    width: 100%;
+}
+.suggestedparticipants__container--participant {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+

@@ -1,1 +1,74 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$gc-mess-primary: mat.define-palette(mat.$indigo-palette);
+$gc-mess-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$gc-mess-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$gc-mess-theme: mat.define-light-theme((
+  color: (
+    primary: $gc-mess-primary,
+    accent: $gc-mess-accent,
+    warn: $gc-mess-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($gc-mess-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --ff-primary: 'Poppins', sans-serif;
+  --clr-primary-400: #0166B3;
+  --clr-primary-600: #015ca1;
+  --clr-primary-800: #01528f;
+  --clr-primary-30pct: #4d94ca;
+  --clr-secondary-400: #f3f4f6;
+  --clr-secondary-600: #dbdcdd;
+  --clr-secondary-800: #c7c7c7;
+  --clr-blackhole: #000000;
+  --clr-darkgrey: #121212;
+  --clr-neutral-400: #FFF;
+  --clr-success-400: #32CD32;
+  --clr-success-600: #2db92d;
+  --clr-danger-400: #EE4B2B;
+  --clr-danger-600: #a7351e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+}
+
+html, body { 
+  height: 100%;
+}
+
+body { 
+  margin: 0;
+  height: 100%;
+}
+
+// Angular Material Default theme and Poppins font import
+// @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+

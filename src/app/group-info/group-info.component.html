@@ -1,0 +1,74 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <!-- <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button> -->
+
+      <mat-toolbar>
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button routerLink="/stud-profile" class="profile-btn">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      <div class="main__container">
+        <h1>Group Information</h1>
+        <div class="illustration__container">
+            <img src="../../assets/images/group-information-illustration.svg" alt="Group information illustration" loading="lazy">
+        </div>
+        <div class="main__container--input">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput>
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </div>
+        <div class="suggestedparticipants__container">
+            <p>Suggested</p>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+            <div class="suggestedparticipants__container--participant">
+                <mat-radio-button value="1"></mat-radio-button>
+                <p>John Doe</p>
+            </div>
+        </div>
+        <button mat-flat-button color="primary">Create Group</button>
+      </div>
+
+    </div>
+  
+  </mat-drawer-container>

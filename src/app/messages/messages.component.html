@@ -1,0 +1,72 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Chats</p>
+      <div class="illustration__container">
+        <img src="../../assets/images/messages-sidenav-illustration.svg" alt="Messages illustration">
+      </div>
+      <div class="message__container">
+        <div class="message__container--flex">
+            <div class="usericon__container">
+                <img src="../../assets/images/message-user-placeholder.png" alt="">
+            </div>
+            <div class="message__container--message">
+                <p>Jonathan Joestar</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit natus blanditiis nam veniam facilis ullam, delectus, 
+                    nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="message__container">
+        <div class="message__container--flex">
+            <div class="usericon__container">
+                <img src="../../assets/images/message-user-placeholder.png" alt="">
+            </div>
+            <div class="message__container--message">
+                <p>Jonathan Joestar</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit natus blanditiis nam veniam facilis ullam, delectus, 
+                    nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="message__container">
+        <div class="message__container--flex">
+            <div class="usericon__container">
+                <img src="../../assets/images/message-user-placeholder.png" alt="">
+            </div>
+            <div class="message__container--message">
+                <p>Jonathan Joestar</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit natus blanditiis nam veniam facilis ullam, delectus, 
+                    nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
+                </p>
+            </div>
+        </div>
+      </div>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <!-- <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button> -->
+
+      <mat-toolbar>
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button routerLink="/stud-profile" class="profile-btn">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      <div class="main__container">
+        
+      </div>
+
+    </div>
+  
+  </mat-drawer-container>
