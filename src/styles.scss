@@ -73,7 +73,22 @@ body {
 
 // Angular Material Default theme and Poppins font import
 // @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+// for importing fonts online ...
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+// end
+
+// for the downloaded font on the assets/fonts directory ... 
+
+// @font-face {
+//   font-family: 'Poppins';
+//   src: url(assets/fonts/Poppins-Medium.ttf);
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// end
 

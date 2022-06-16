@@ -12,6 +12,7 @@ import {FormControl} from '@angular/forms';
 export class GroupInfoComponent implements OnInit {
 
   students = new FormControl('');
+  
   studentList: string[] = [
     'Nicole Marcial', 
     'Bernie Inociete', 

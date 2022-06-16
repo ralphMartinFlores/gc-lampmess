@@ -14,7 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
@@ -23,6 +23,7 @@ import { GroupInfoComponent } from './group-info/group-info.component';
 import { MessagesComponent } from './messages/messages.component';
 import { GroupsComponent } from './groups/groups.component';
 import { LoginComponent } from './login/login.component';
+import { MessagingComponent } from './messaging/messaging.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +32,15 @@ import { LoginComponent } from './login/login.component';
     GroupInfoComponent,
     MessagesComponent,
     GroupsComponent,
-    LoginComponent
+    LoginComponent,
+    MessagingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatSidenavModule,
     MatDividerModule,
     MatIconModule,

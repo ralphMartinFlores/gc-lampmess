@@ -1,0 +1,159 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p class="sidenav__title">Chats</p>
+      <div class="illustration__container">
+        <img src="../../assets/images/messages-sidenav-illustration.svg" alt="Messages illustration">
+      </div>
+      <div class="message__container">
+        <div class="message__container--flex">
+            <div class="usericon__container">
+                <img src="../../assets/images/message-user-placeholder.png" alt="">
+            </div>
+            <div class="message__container--message">
+                <p>Jonathan Joestar</p>
+                <p>June 15 1:55am</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit natus blanditiis nam veniam facilis ullam, delectus, 
+                    nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="message__container">
+        <div class="message__container--flex">
+            <div class="usericon__container">
+                <img src="../../assets/images/message-user-placeholder.png" alt="">
+            </div>
+            <div class="message__container--message">
+                <p>Jonathan Joestar</p>
+                <p>June 15 1:55am</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit natus blanditiis nam veniam facilis ullam, delectus, 
+                    nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="message__container">
+        <div class="message__container--flex">
+            <div class="usericon__container">
+                <img src="../../assets/images/message-user-placeholder.png" alt="">
+            </div>
+            <div class="message__container--message">
+                <p>Jonathan Joestar</p>
+                <p>June 15 1:55am</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Velit natus blanditiis nam veniam facilis ullam, delectus, 
+                    nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
+                </p>
+            </div>
+        </div>
+      </div>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <mat-toolbar>
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button routerLink="/stud-profile" class="profile-btn">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      <div class="main__container">
+        <div class="greetings__container">
+            <h1>Welcome!</h1>
+            <p>This is the start of your chat with Team Flash Coders</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="messagecontent__container" *ngFor="let message of messageData" id="scrollDemo">
+            <!-- <div class="indivmessage__container--usericon">
+                <img [src]="message.img" alt="">
+            </div>
+            <div class="indivmessage__container--message">
+                <div class="indivmessage--name--date">
+                    <p>{{ message.fullname }} |<span> {{ message.datetime }}</span></p>
+                    <p> {{ message.messagecontent }} </p>
+                </div>
+            </div> -->
+            <div class="imageAvatarLeft" *ngIf="message.isMe == false">
+                    <div class="imageAvatarBottom">
+                        <div class="avatar">
+                            <img [src]="message.img" alt="">
+
+                        </div>
+                    </div>
+
+                    <div class="chatcontent__container">
+                        <div class="personsname__container">
+                            <span>{{ message.fullname }}</span>
+                            <span> {{ message.datetime }} </span> 
+                        </div>
+                        <div class="chatDiv">
+                            <p> {{ message.messagecontent }} </p>
+                        </div>
+                    </div>
+               
+
+            </div>
+
+            <div class="imageAvatarRight" *ngIf="message.isMe == true">
+
+                <div class="chatcontent__container">
+                    <div class="personsname__container">
+                        <span>You</span> 
+                        <!-- TODO: Need to convert into date pipe -->
+                        <span *ngIf="message.datetime"> {{ message.datetime }} </span> 
+                        <!-- End -->
+                    </div>
+                    <div class="chatDivReply">
+                        <p> {{ message.messagecontent }}  </p>
+                    </div>
+                </div>
+           
+
+        </div>
+        </div>
+        <!-- <mat-divider></mat-divider> -->
+        <!-- <div class="indivmessage__container">
+            <div class="indivmessage__container--usericon">
+                <img src="../../assets/images/message-user-icon.png" alt="">
+            </div>
+            <div class="indivmessage__container--message">
+                <div class="indivmessage--name--date">
+                    <p>John Doe |<span> Today at 1:55am</span></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iusto!</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="indivmessage__container">
+            <div class="indivmessage__container--usericon">
+                <img src="../../assets/images/message-user-icon.png" alt="">
+            </div>
+            <div class="indivmessage__container--message">
+                <div class="indivmessage--name--date">
+                    <p>John Doe |<span> Today at 1:55am</span></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem et esse ducimus velit, mollitia id adipisci cumque! Quis, maiores atque? Iste vitae ratione quaerat tenetur deserunt fuga voluptatum, accusantium minima labore hic cumque at eius ab soluta fugiat tempore. Earum unde quae accusantium voluptatum maxime fugit ipsa modi ipsam!</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider> -->
+      </div>
+      <div class="yourmessage__container">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <input [(ngModel)]="chatContent" (keyup.enter)="chat(chatContent)" matInput placeholder="Your message">
+            <button matSuffix mat-icon-button>
+                <mat-icon>send</mat-icon>
+            </button>
+            <button matSuffix mat-icon-button>
+                <mat-icon>file_upload</mat-icon>
+            </button>
+        </mat-form-field>
+      </div>
+
+    </div>
+  
+  </mat-drawer-container>

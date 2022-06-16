@@ -103,7 +103,7 @@ mat-divider {
 .yourmessage__container {
     position: sticky;
     position: -webkit-sticky;
-    bottom: 0;
+    bottom: 0 !important;
     z-index: 1000;
     background-color: #F3F4F6;
     width: 100%;
@@ -122,4 +122,4 @@ mat-divider {
     p {
         margin-top: 3px;
     }
-}
+}  
