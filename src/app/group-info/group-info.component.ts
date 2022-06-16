@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDrawer } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-group-info',
@@ -9,6 +10,17 @@ import { delay } from 'rxjs/operators';
   styleUrls: ['./group-info.component.scss']
 })
 export class GroupInfoComponent implements OnInit {
+
+  students = new FormControl('');
+  studentList: string[] = [
+    'Nicole Marcial', 
+    'Bernie Inociete', 
+    'Christian Alip',
+    'Allen Eduard Uy',
+    'Mitchell Alop',
+    'Austin Ray Aranda',
+    'Ralph Martin Flores'
+  ];
 
   @ViewChild(MatDrawer)
   drawer!: MatDrawer;
