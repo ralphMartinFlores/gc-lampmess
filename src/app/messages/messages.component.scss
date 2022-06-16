@@ -2,7 +2,7 @@ mat-drawer-container {
     height: 100%;
 }
 mat-drawer {
-    width: 200px;
+    width: 250px;
     background-color: var(--clr-primary-400);
     color: var(--clr-neutral-400);
     padding: 10px;
@@ -17,19 +17,18 @@ mat-toolbar {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: var(--clr-neutral-400);;
     position: sticky;
-    position: -webkit-sticky; /* For macOS/iOS Safari */
-    top: 0; /* Sets the sticky toolbar to be on top */
-    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
 }
 .profile-btn:hover {
     background-color: var(--clr-secondary-400);
 }
 .main__container {
-    border: 2px solid red;
     height: 100%;
+    padding: 16px;
 }
 .illustration__container {
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -42,7 +41,6 @@ mat-toolbar {
     gap: 10px;
     align-items: center;
     margin-top: 10px;
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -52,7 +50,7 @@ mat-toolbar {
     padding: 5px;
     cursor: pointer;
 }
-.usericon__container {
+.usericon__container, .indivmessage__container--usericon {
     img {
         width: 32px;
         height: 32px;
@@ -60,12 +58,49 @@ mat-toolbar {
     }
 }
 .message__container--message {
+    flex-grow: 1;
     p {
+        margin: 0;
+        font-size: 14px;
+    }
+    p:last-of-type {
         font-size: 12px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         margin: 0;
-        width: 125px;
+        width: 150px;
     }
+}
+.indivmessage__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    .indivmessage--name--date {
+        p {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+mat-divider {
+    margin-top: 10px;
+}
+.example-full-width {
+    width: 100%;
+}
+.yourmessage__container {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #F3F4F6;
+    width: 100%;
+    padding: 10px;
+}
+.greetings__container {
+    
 }

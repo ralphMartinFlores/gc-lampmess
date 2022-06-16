@@ -11,6 +11,7 @@
             </div>
             <div class="message__container--message">
                 <p>Jonathan Joestar</p>
+                <p>June 15 1:55am</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Velit natus blanditiis nam veniam facilis ullam, delectus, 
                     nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
@@ -25,6 +26,7 @@
             </div>
             <div class="message__container--message">
                 <p>Jonathan Joestar</p>
+                <p>June 15 1:55am</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Velit natus blanditiis nam veniam facilis ullam, delectus, 
                     nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
@@ -39,6 +41,7 @@
             </div>
             <div class="message__container--message">
                 <p>Jonathan Joestar</p>
+                <p>June 15 1:55am</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Velit natus blanditiis nam veniam facilis ullam, delectus, 
                     nemo ratione asperiores, nesciunt dolores odio explicabo beatae voluptates.
@@ -49,10 +52,6 @@
     </mat-drawer>
   
     <div class="example-sidenav-content">
-      <!-- <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button> -->
-
       <mat-toolbar>
         <button mat-icon-button (click)="drawer.toggle()">
           <mat-icon>menu</mat-icon>
@@ -64,7 +63,56 @@
       </mat-toolbar>
 
       <div class="main__container">
-        
+        <div class="greetings__container">
+            <!-- <mat-icon>chat</mat-icon> -->
+            <h1>Welcome!</h1>
+            <p>This is the start of your chat with Team Flash Coders</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="indivmessage__container">
+            <div class="indivmessage__container--usericon">
+                <img src="../../assets/images/message-user-icon.png" alt="">
+            </div>
+            <div class="indivmessage__container--message">
+                <div class="indivmessage--name--date">
+                    <p>John Doe |<span> Today at 1:55am</span></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iusto!</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="indivmessage__container">
+            <div class="indivmessage__container--usericon">
+                <img src="../../assets/images/message-user-icon.png" alt="">
+            </div>
+            <div class="indivmessage__container--message">
+                <div class="indivmessage--name--date">
+                    <p>John Doe |<span> Today at 1:55am</span></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iusto!</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="indivmessage__container">
+            <div class="indivmessage__container--usericon">
+                <img src="../../assets/images/message-user-icon.png" alt="">
+            </div>
+            <div class="indivmessage__container--message">
+                <div class="indivmessage--name--date">
+                    <p>John Doe |<span> Today at 1:55am</span></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem et esse ducimus velit, mollitia id adipisci cumque! Quis, maiores atque? Iste vitae ratione quaerat tenetur deserunt fuga voluptatum, accusantium minima labore hic cumque at eius ab soluta fugiat tempore. Earum unde quae accusantium voluptatum maxime fugit ipsa modi ipsam!</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+      <div class="yourmessage__container">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput placeholder="Your message">
+            <button matSuffix mat-icon-button aria-label="Clear">
+                <mat-icon>send</mat-icon>
+            </button>
+        </mat-form-field>
       </div>
 
     </div>

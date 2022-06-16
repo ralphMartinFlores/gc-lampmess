@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { GroupInfoComponent } from './group-info/group-info.component';
 import { MessagesComponent } from './messages/messages.component';
+import { GroupsComponent } from './groups/groups.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path : 'messages', 
     component : MessagesComponent
+  },
+  {
+    path : 'groups', 
+    component : GroupsComponent
   },
 ];
 
