@@ -1,6 +1,6 @@
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Chats</p>
+      <p class="sidenav__title">Chats</p>
       <div class="illustration__container">
         <img src="../../assets/images/messages-sidenav-illustration.svg" alt="Messages illustration">
       </div>
@@ -64,7 +64,6 @@
 
       <div class="main__container">
         <div class="greetings__container">
-            <!-- <mat-icon>chat</mat-icon> -->
             <h1>Welcome!</h1>
             <p>This is the start of your chat with Team Flash Coders</p>
         </div>
@@ -109,8 +108,11 @@
       <div class="yourmessage__container">
         <mat-form-field class="example-full-width" appearance="outline">
             <input matInput placeholder="Your message">
-            <button matSuffix mat-icon-button aria-label="Clear">
+            <button matSuffix mat-icon-button>
                 <mat-icon>send</mat-icon>
+            </button>
+            <button matSuffix mat-icon-button>
+                <mat-icon>file_upload</mat-icon>
             </button>
         </mat-form-field>
       </div>

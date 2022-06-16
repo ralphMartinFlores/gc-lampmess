@@ -1,0 +1,286 @@
+// New Mobile First Styles
+.main-container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.gc-logo, .flash-logo {
+    width: 250px;
+    height: 250px;
+}
+
+.layered-waves {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: bottom;
+    }
+}
+
+.layered-peaks {
+    display: none;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.graphic-container {
+    display: none;
+}
+
+.form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.625rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+
+    .logo-container {
+        width: 100%;
+    }
+} 
+
+.form-container input {
+    background-color: var(--clr-secondary-400);
+    border: 2.5px solid transparent;
+    border-radius: 3.125rem;
+    padding: 1rem;
+    width: 90%;
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+    font-weight: 600;
+    letter-spacing: 0.031rem;
+    margin: 0 auto;
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.form-container input:focus-visible {
+    outline: none;
+    border: 2.5px solid var(--clr-primary-400);
+}
+
+.form-container .invalid input{
+    outline: none;
+    border: 2.5px solid red;  
+}
+
+mat-error{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container .invalid input{
+    outline: none;
+    border: 2.5px solid red;  
+}
+
+.error-message{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+
+.forgot-password {
+    margin: 0 auto;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+    }
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: var(--clr-primary-400);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-400);
+    padding: 0.313rem;
+    border-radius: 3.125rem;
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+    font-weight: 600;
+    letter-spacing: 0.063rem;
+    width: 70%;
+    margin: 0 auto;
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.login-btn:hover {
+    background-color: var(--clr-primary-600);
+}  
+
+.showpass-cbx {
+    width: 85%;
+    margin: 0 auto;
+    color: var(--clr-darkgrey);
+    font-size: 14px;
+}
+
+// End of New Mobile First Styles
+
+@media screen and (min-width: 30rem) {
+    .layered-waves {
+        display: none;
+    }
+    .gc-logo, .flash-logo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 30.063rem) and (min-width: 48rem) {
+    .layered-peaks {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 48.063rem) and (min-width: 64rem) {
+    .layered-peaks {
+        display: none;
+    }
+
+    .graphic-container {
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .form-container input {
+        width: 80%;
+        //font-size: 1.125rem;
+        padding: 1.375rem;
+    }
+
+    .login-btn {
+        width: 60%;
+        //font-size: 1.125rem;
+        padding: 0.813rem;
+    }
+
+    .logo-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .gc-logo, .flash-logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    // .forgot-password {
+    //     p {
+    //         font-size: 1rem;
+    //     }
+    // }
+
+    .showpass-cbx {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 64.063rem) and (min-width: 75rem) {
+    .layered-peaks {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        img {
+            max-width: 100%;
+            height: 100vh;
+            vertical-align: bottom;
+        }
+    }
+
+    .graphic-container {
+        display: grid;
+        place-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .form-container input {
+        width: 60%;
+        padding: 1.5rem;
+    }
+
+    .login-btn {
+        width: 45%;
+        padding: 0.625rem;
+    }
+
+    .logo-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    // .forgot-password {
+    //     p {
+    //         font-size: 1rem;
+    //     }
+    // }
+
+    .showpass-cbx {
+        width: 55%;
+    }
+}

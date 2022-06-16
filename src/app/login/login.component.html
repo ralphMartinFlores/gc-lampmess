@@ -1,0 +1,51 @@
+<div class="main-container">
+    <div class="layered-waves">
+        <img src="assets/images/layered-waves-haikei.svg" alt="Layered waves beneath form in mobile mode" loading="lazy">
+    </div>
+
+    <div class="layered-peaks">
+        <img src="assets/images/layered-peaks-haikei.svg" alt="Layered peaks on login graphic illustration on desktop mode" loading="lazy">
+    </div>
+
+    <div class="grid">
+        <!-- Login graphic illustration container -->
+        <div class="graphic-container">
+            <img draggable="false" src="assets/images/login-illustration.svg" alt="Login illustration" loading="lazy">
+        </div>
+        <!-- End of container -->
+
+        <!-- Login form and login button container -->
+        <div class="form-container">
+
+            <!-- Logos -->
+            <!-- <div class="logo-container">
+                <div class="imglogo-wrapper">
+                    <img class="gc-logo" draggable="false" src="assets/images/gclogo.png" alt="Gordon College Logo" loading="lazy">
+                </div>
+                <div class="imglogo-wrapper">
+                    <img class="flash-logo" draggable="false" src="assets/images/flash logo.png" alt="GC Flash Logo" loading="lazy">
+                </div>
+            </div> -->
+
+            <div class="greetings__container">
+                <h1></h1>
+            </div>
+
+            <!-- Input fields -->
+            <input formControlName="studnum_fld" type="text" placeholder="Username" required>
+            <input id="password-field" formControlName="pword_fld" type="password" placeholder="Password" required>
+            <!-- <mat-error *ngIf="errorMessage != ''"> {{errorMessage}}</mat-error> -->
+            <!-- Show/Hide Password Checkbox -->
+            <mat-checkbox class="showpass-cbx" (change)="onChange($event)">Show Password</mat-checkbox>
+        
+            <!-- Login button -->
+            <button mat-flat-button class="login-btn" type="submit">Log in</button>
+
+            <!-- Forgot password container -->
+            <div class="forgot-password">
+                <p routerLink="/forgot-password">Forgot Password? <span><a>Click here</a></span></p>
+            </div>
+            <!-- End of forgot password container -->
+        </div>
+    </div>
+</div>

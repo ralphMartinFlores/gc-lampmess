@@ -15,12 +15,14 @@ import { MatInputModule } from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 import { HomeComponent } from './home/home.component';
 import { GroupInfoComponent } from './group-info/group-info.component';
 import { MessagesComponent } from './messages/messages.component';
 import { GroupsComponent } from './groups/groups.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { GroupsComponent } from './groups/groups.component';
     HomeComponent,
     GroupInfoComponent,
     MessagesComponent,
-    GroupsComponent
+    GroupsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { GroupsComponent } from './groups/groups.component';
     MatInputModule,
     MatRadioModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

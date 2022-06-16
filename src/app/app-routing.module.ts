@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { GroupInfoComponent } from './group-info/group-info.component';
 import { MessagesComponent } from './messages/messages.component';
 import { GroupsComponent } from './groups/groups.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path : 'groups', 
     component : GroupsComponent
+  },
+  {
+    path : 'login', 
+    component : LoginComponent
   },
 ];
 

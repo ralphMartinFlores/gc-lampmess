@@ -1,5 +1,10 @@
 mat-drawer-container {
     height: 100%;
+    .sidenav__title {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
 }
 mat-drawer {
     width: 250px;
@@ -92,6 +97,9 @@ mat-divider {
 .example-full-width {
     width: 100%;
 }
+.example-sidenav-content {
+    height: 100%;
+}
 .yourmessage__container {
     position: sticky;
     position: -webkit-sticky;
@@ -100,7 +108,18 @@ mat-divider {
     background-color: #F3F4F6;
     width: 100%;
     padding: 10px;
+    mat-icon {
+        color: var(--clr-primary-400);
+    }
 }
 .greetings__container {
-    
+    h1, p {
+        margin: 0;
+    }
+    h1 {
+        color: var(--clr-primary-400);
+    }
+    p {
+        margin-top: 3px;
+    }
 }

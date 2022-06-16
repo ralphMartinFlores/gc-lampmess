@@ -2,7 +2,7 @@ mat-drawer-container {
     height: 100%;
 }
 mat-drawer {
-    width: 200px;
+    width: 250px;
     background-color: var(--clr-primary-400);
     color: var(--clr-neutral-400);
 }
@@ -34,19 +34,38 @@ mat-toolbar {
         }
     }
 }
-.class__container {
+.group__container {
+    display: flex;
+    gap: 10px;
     background-color: #cce0f0;
-    border-radius: 8px;
     padding: 10px;
+    border-radius: 5px;
+    align-items: center;
     margin-top: 16px;
     cursor: pointer;
-    p {
-        margin: 0;
-        font-size: 14px;
+    .groupicon__container {
+        img {
+            width: 64px;
+            height: 64px;
+        }
     }
-    .title {
-        font-size: 22px;
-        color: var(--clr-primary-400);
-        font-weight: 600;
+    .group__container--info {
+        p {
+            margin: 0;
+        }
+        p:first-of-type {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--clr-primary-400);
+        }
+        p:last-of-type {
+            margin-top: 3px;
+        }
+    }
+}
+.illustration__container {
+    img {
+        width: 100%;
+        height: auto;
     }
 }
